@@ -5,7 +5,7 @@ HTML &middot; CSS &middot; JAVASCRIPT(ES Modules)와 **Supabase**(Auth / Databas
 
 ❗❗ 실제 결제/예약 서비스가 아닙니다.
 
-** Demo ** : 깃배포주소 : https://projecteam7389.github.io/ART-ARCHIVE/
+** Demo ** : 깃배포주소 : https://projecteam7389.github.io/ART_ARCHIVE/
 
 ---
 
