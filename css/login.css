@@ -1,0 +1,187 @@
+/* =========================
+   Login / Sign Up
+========================= */
+
+.form-box {
+    width: 100%;
+    max-width: 460px;
+    margin: 60px auto;
+    padding: 48px 40px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #e5e3dc;
+}
+
+/* 상단 제목 */
+.form-box .sub-title {
+    margin: 0 0 14px;
+    color: #9a7958;
+    font-family: 'Aritaburi', serif;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-align: center;
+}
+
+.form-box h1 {
+    margin: 0 0 36px;
+    color: #22221f;
+    font-family: 'MaruBuri', serif;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* 폼 기본 설정 */
+#auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#auth-form>label {
+    margin-top: 8px;
+    color: #44413b;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#auth-form input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    box-sizing: border-box;
+    border: 1px solid #dedbd3;
+    border-radius: 0;
+    outline: none;
+    background: #fcfbf8;
+    color: #22221f;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.25s ease;
+}
+
+#auth-form input:focus {
+    border-color: #9a7958;
+    background: #fff;
+}
+
+#auth-form input::placeholder {
+    color: #aaa49a;
+}
+
+/* 로그인 / 회원가입 선택 */
+.radio-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e5e3dc;
+}
+
+.radio-row input {
+    display: none;
+}
+
+/* 라디오 버튼 숨기기 */
+.radio-row input[type="radio"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.radio-row label {
+    position: relative;
+    flex: 1;
+    padding: 16px 0;
+    color: #99948b;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* 선택된 항목 */
+.radio-row label:has(input[type="radio"]:checked) {
+    color: #292821;
+    font-weight: 600;
+}
+
+/* 선택된 항목의 밑줄 */
+.radio-row label:has(input[type="radio"]:checked)::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #9a7958;
+}
+
+/* 마우스 호버 */
+.radio-row label:hover {
+    color: #9a7958;
+}
+
+/* 키보드 접근성 */
+.radio-row label:has(input[type="radio"]:focus-visible) {
+    outline: 2px solid #9a7958;
+    outline-offset: -4px;
+}
+
+/* 확인 버튼 */
+#auth-form button {
+    width: 100%;
+    height: 50px;
+    margin-top: 16px;
+    border: 1px solid #292821;
+    border-radius: 0;
+    background: #292821;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+#auth-form button:hover {
+    background: #9a7958;
+    border-color: #9a7958;
+}
+
+/* 안내 메시지 */
+#message {
+    min-height: 20px;
+    margin: 4px 0 0;
+    color: #9a7958;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 640px) {
+    .form-box {
+        max-width: 100%;
+        margin: 30px auto;
+        padding: 36px 24px;
+    }
+
+    .form-box h1 {
+        margin-bottom: 28px;
+        font-size: 24px;
+    }
+
+    #auth-form input {
+        height: 46px;
+    }
+
+    #auth-form button {
+        height: 48px;
+    }
+}

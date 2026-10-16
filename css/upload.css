@@ -1,0 +1,198 @@
+/* =========================
+   Upload Artwork
+========================= */
+
+main.container.section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    background: #f8f7f3;
+}
+
+/* 등록 폼 박스 */
+.form-box {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 48px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #e5e3dc;
+}
+
+/* 상단 영문 제목 */
+.form-box .eyebrow {
+    margin: 0 0 12px;
+    color: #9a7958;
+    font-family: 'Aritaburi', serif;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+}
+
+/* 메인 제목 */
+.form-box h1 {
+    margin: 0 0 16px;
+    color: #22221f;
+    font-family: 'MaruBuri', serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* 안내 문구 */
+.form-box>.muted {
+    margin: 0 0 36px;
+    color: #77766e;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* 폼 레이아웃 */
+#upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 입력 항목 제목 */
+#upload-form label {
+    margin-top: 8px;
+    color: #44413b;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* 입력창 공통 */
+#upload-form input:not([type="file"]),
+#upload-form select,
+#upload-form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    box-sizing: border-box;
+    border: 1px solid #dedbd3;
+    border-radius: 0;
+    outline: none;
+    background: #fcfbf8;
+    color: #292821;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.25s ease;
+}
+
+/* 입력창 높이 */
+#upload-form input:not([type="file"]),
+#upload-form select {
+    height: 48px;
+}
+
+/* 작품 설명 */
+#upload-form textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+/* 입력창 포커스 */
+#upload-form input:focus,
+#upload-form select:focus,
+#upload-form textarea:focus {
+    border-color: #9a7958;
+    background: #fff;
+}
+
+/* 파일 선택 */
+#upload-form input[type="file"] {
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+    border: 1px dashed #cfc6b8;
+    background: #fcfbf8;
+    color: #77766e;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* 이미지 미리보기 */
+#preview {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    margin-top: 8px;
+    object-fit: contain;
+    background: #f8f7f3;
+}
+
+#preview[hidden] {
+    display: none;
+}
+
+/* 등록 버튼 */
+#upload-form button {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 16px;
+    border: 1px solid #292821;
+    border-radius: 0;
+    background: #292821;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+#upload-form button:hover {
+    border-color: #9a7958;
+    background: #9a7958;
+}
+
+#upload-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* 등록 결과 메시지 */
+#upload-message {
+    min-height: 20px;
+    margin: 4px 0 0;
+    color: #9a7958;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 640px) {
+    main.container.section {
+        padding: 40px 16px;
+    }
+
+    .form-box {
+        padding: 32px 22px;
+    }
+
+    .form-box h1 {
+        font-size: 25px;
+    }
+
+    .form-box>.muted {
+        margin-bottom: 28px;
+        font-size: 12px;
+    }
+
+    #upload-form input:not([type="file"]),
+    #upload-form select {
+        height: 46px;
+    }
+
+    #upload-form button {
+        min-height: 48px;
+    }
+}

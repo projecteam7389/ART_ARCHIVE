@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART ARCHIVE || LOGIN</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script type="module" src="js/login.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">ART ARCHIVE</a>
+            <div class="gnb">
+                <a href="index.html">HOME</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="upload.html">UPLOAD</a>
+                <a href="guide.html">GUIDE</a>
+                <span id="account-nav">
+                    <a href="login.html">LOGIN</a>
+                </span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section container">
+        <div class="form-box">
+            <p class="sub-title">ACCOUNT</p>
+            <h1>로그인 / 회원가입</h1>
+            <form action="" id="auth-form">
+                <div class="radio-row">
+                    <label>
+                        <input type="radio" name="mode" value="login" checked>로그인
+                    </label>
+                    <label>
+                        <input type="radio" name="mode" value="signup">회원가입
+                    </label>
+                </div>
+
+                <label for="email">이메일</label>
+                <input type="email" id="email" required autocomplete="email">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" maxlength="12" required autocomplete="current-password">
+                <button type="submit">확인</button>
+
+                <p id="message" aria-live="polite"></p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h3>ART REMAINS, STORIES CONTINUE.</h3> <br>
+            예술의 순간을 기록하고, 그 안에 담긴 이야기를 오래도록 간직합니다.
+            <span>ART ARCHIVE © 2026</span>
+
+            <p>ART ARCHIVE &middot; javascript + supabase 포트폴리오 &middot; 실제 결제/예약 서비스가 아닙니다.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

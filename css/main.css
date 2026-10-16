@@ -1,0 +1,110 @@
+/* =========================
+   Hero
+========================= */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 560px;
+    padding: 100px 0;
+    box-sizing: border-box;
+    color: #f5efe5;
+    background:
+        linear-gradient(90deg,
+            rgba(35, 29, 23, 0.78) 0%,
+            rgba(35, 29, 23, 0.48) 33%,
+            rgba(35, 29, 23, 0.12) 100%),
+        url('https://images.unsplash.com/photo-1688588428105-c9cadcc670ab?q=80&w=1157') top / cover no-repeat;
+}
+
+.hero .sub-title {
+    margin-bottom: 28px;
+    color: #d5b994;
+    font-family: var(--enText);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    line-height: 1.6;
+}
+
+.hero h2 {
+    max-width: 760px;
+    margin: 0 0 24px;
+    color: #fffaf2;
+    font-family: 'MaruBuri', serif;
+    font-size: clamp(32px, 4.5vw, 56px);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.045em;
+    word-break: keep-all;
+}
+
+.hero p:not(.sub-title) {
+    max-width: 540px;
+    margin: 0 0 38px;
+    color: rgba(255, 250, 242, 0.82);
+    font-family: serif;
+    font-size: clamp(14px, 1.4vw, 17px);
+    font-weight: 400;
+    line-height: 1.9;
+    letter-spacing: 0.015em;
+}
+
+.hero .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 28px;
+    box-sizing: border-box;
+    color: #33291f;
+    background: #e5d2b7;
+    border: 1px solid #e5d2b7;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    color: #f5efe5;
+    background: transparent;
+    border-color: #e5d2b7;
+}
+
+@media (max-width: 640px) {
+    .hero {
+        min-height: 500px;
+        padding: 80px 0;
+        background-position: 58% center;
+    }
+
+    .hero .sub-title {
+        margin-bottom: 22px;
+        font-size: 10px;
+        letter-spacing: 0.18em;
+    }
+
+    .hero h2 {
+        margin-bottom: 20px;
+        font-size: clamp(29px, 8vw, 40px);
+        line-height: 1.55;
+    }
+
+    .hero p:not(.sub-title) {
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 1.8;
+        overflow-wrap: anywhere;
+    }
+
+    .hero .btn {
+        min-height: 46px;
+        padding: 0 22px;
+        font-size: 13px;
+    }
+}

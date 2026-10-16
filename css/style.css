@@ -1,0 +1,336 @@
+@charset "utf-8";
+@import url(reset.css);
+
+:root {
+    --ink: #22221f;
+    --muted: #77766e;
+    --paper: #f8f7f3;
+    --line: #e5e3dc;
+    --accent: #66715b;
+    --imgTitle: 'MaruBuri';
+    --enText: 'Aritaburi';
+}
+
+body {
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+}
+
+button,
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    color: white;
+    background: var(--ink);
+    border-radius: 4px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+.container {
+    width: min(1100px, calc(100% - 40px));
+    margin: auto;
+}
+
+.sub-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/* =========================
+   Header
+========================= */
+.header {
+    background: #fefefe;
+    border-bottom: 1px solid var(--line);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    min-height: 80px;
+}
+
+.logo {
+    font-family: 'Aritaburi', serif;
+    font-size: 26px;
+    letter-spacing: -0.5px;
+}
+
+.gnb {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.gnb span {
+    display: flex;
+    align-items: center;
+}
+
+.gnb a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.gnb a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--ink);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.gnb a:hover::after {
+    transform: scaleX(1);
+}
+
+#logout-btn {
+    background: #222;
+    margin-left: 10px;
+    padding: 2px 12px;
+    border: 1px dotted #222;
+    font-size: 10px;
+    color: #fff;
+    line-height: 1.65;
+}
+
+#logout-btn:hover {
+    background: #222222d4;
+}
+
+/* =========================
+   Featured Works
+========================= */
+.section.container {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.section .sub-title {
+    margin: 0 0 18px;
+    color: #9a7958;
+    font-family: var(--enText);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    line-height: 1.6;
+}
+
+.section h2 {
+    margin: 0 0 42px;
+    color: #332d27;
+    font-family: 'MaruBuri', serif;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.04em;
+}
+
+#featured {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px 24px;
+}
+
+.art-card {
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.art-card img {
+    width: 100%;
+    height: 260px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.art-card .art-info {
+    padding: 12px 12px 20px;
+}
+
+.art-card .art-info h3 {
+    font-family: var(--imgTitle);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.art-card .art-info p {
+    font-family: 'pretendard';
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.art-card .art-info strong {
+    font-size: 14px;
+}
+
+.more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 52px;
+}
+
+#more-btn {
+    min-width: 160px;
+    min-height: 48px;
+    padding: 0 28px;
+    color: #514334;
+    background: transparent;
+    border: 1px solid #b9a58d;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#more-btn:hover {
+    color: #f8f3eb;
+    background: #514334;
+    border-color: #514334;
+}
+
+/* 로딩 중 */
+#more-btn:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+/* hidden 속성이 다른 CSS에 의해 무시되지 않도록 처리 */
+#more-btn[hidden] {
+    display: none !important;
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+    padding: 64px 0 28px;
+    color: #d5c8b6;
+    background: #302a24;
+    border-top: 1px solid #51483d;
+    font-size: 13px;
+    letter-spacing: 0.025em;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer .container h3 {
+    font-size: 16px;
+}
+
+
+.footer .container>span {
+    display: block;
+    width: 100%;
+    margin-top: 36px;
+    padding-top: 20px;
+    color: #a99b89;
+    border-top: 1px solid #51483d;
+    font-family: serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+
+.footer .container>p {
+    margin: 18px 0 0;
+    color: #9f9486;
+    font-family: sans-serif;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1024px) {
+    #featured {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px 20px;
+    }
+
+    .section.container {
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .gnb {
+        gap: 16px;
+    }
+
+    .gnb a {
+        font-size: 13px;
+    }
+
+    .section.container {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .section .sub-title {
+        margin-bottom: 14px;
+        font-size: 10px;
+        letter-spacing: 0.17em;
+    }
+
+    .section h2 {
+        margin-bottom: 28px;
+        font-size: 27px;
+    }
+
+    #featured {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 26px 14px;
+    }
+
+    .more-wrap {
+        margin-top: 36px;
+    }
+
+    .more-wrap {
+        margin-top: 36px;
+    }
+
+    #more-btn {
+        min-width: 140px;
+        min-height: 46px;
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 46px 0 24px;
+        font-size: 12px;
+    }
+
+    .footer .container>span {
+        margin-top: 28px;
+    }
+}

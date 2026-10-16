@@ -1,0 +1,147 @@
+/* =========================
+   Artwork Detail
+========================= */
+.detail-page {
+    min-height: 60vh;
+}
+
+.detail-page>.sub-title {
+    margin-bottom: 28px;
+    color: #9a7958;
+    font-family: var(--enText);
+    font-size: 14px;
+    letter-spacing: 0.22em;
+}
+
+.detail-status {
+    padding: 48px 20px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+}
+
+.artwork-detail {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    align-items: start;
+    gap: clamp(32px, 6vw, 80px);
+}
+
+.artwork-detail[hidden] {
+    display: none;
+}
+
+.artwork-detail__image {
+    overflow: hidden;
+    background: #e9e1d5;
+}
+
+.artwork-detail__image img,
+.artwork-detail__image .no-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.artwork-detail__image .no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9a7958;
+    font-family: var(--enText);
+    letter-spacing: 0.16em;
+}
+
+.artwork-detail__info {
+    padding-top: 12px;
+}
+
+.artwork-detail__category {
+    margin-bottom: 12px;
+    color: #9a7958;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+}
+
+.artwork-detail__info h1 {
+    margin: 0 0 10px;
+    color: #332d27;
+    font-family: var(--imgTitle), serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 500;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+.artwork-detail__artist {
+    margin-bottom: 28px;
+    padding-left: 5px;
+    color: var(--muted);
+    font-size: 20px;
+}
+
+.artwork-detail__description {
+    min-height: 96px;
+    margin-bottom: 30px;
+    color: #5f5b53;
+    line-height: 1.9;
+    white-space: pre-line;
+    word-break: keep-all;
+    font-size: 16px;
+}
+
+.artwork-detail__prices {
+    margin: 0 0 32px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+}
+
+.artwork-detail__prices>div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.artwork-detail__prices dt {
+    color: var(--muted);
+}
+
+.artwork-detail__prices dd {
+    margin: 0;
+    color: #514334;
+    font-weight: 600;
+}
+
+.artwork-detail__back {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 640px) {
+    .artwork-detail {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .artwork-detail__image img,
+    .artwork-detail__image .no-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .artwork-detail__info {
+        padding-top: 0;
+    }
+
+    .artwork-detail__artist {
+        margin-bottom: 20px;
+    }
+
+    .artwork-detail__description {
+        min-height: 0;
+        margin-bottom: 24px;
+    }
+}

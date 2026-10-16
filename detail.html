@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART ARCHIVE || DETAIL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <script type="module" src="js/detail.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">ART ARCHIVE</a>
+            <div class="gnb">
+                <a href="index.html">HOME</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="upload.html">UPLOAD</a>
+                <a href="guide.html">GUIDE</a>
+                <span id="account-nav">
+                    <a href="login.html">LOGIN</a>
+                </span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container section detail-page">
+        <p class="sub-title">ARTWORK DETAILS</p>
+        <p id="detail-status" class="detail-status" role="status" aria-live="polite">작품 정보를 불러오는 중...</p>
+        <article id="artwork-content" class="artwork-detail" hidden>
+            <div id="artwork-image" class="artwork-detail__image"></div>
+            <div class="artwork-detail__info">
+                <p id="artwork-category" class="artwork-detail__category"></p>
+                <h1 id="artwork-title"></h1>
+                <p id="artwork-artist" class="artwork-detail__artist"></p>
+                <p id="artwork-description" class="artwork-detail__description"></p>
+                <dl class="artwork-detail__prices">
+                    <div>
+                        <dt>구매 가격</dt>
+                        <dd id="artwork-price"></dd>
+                    </div>
+                    <div>
+                        <dt>월 대여 가격</dt>
+                        <dd id="artwork-rental-price"></dd>
+                    </div>
+                </dl>
+                <a class="btn artwork-detail__back" href="gallery.html">갤러리로 돌아가기</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h3>ART REMAINS, STORIES CONTINUE.</h3> <br>
+            예술의 순간을 기록하고, 그 안에 담긴 이야기를 오래도록 간직합니다.
+            <span>ART ARCHIVE © 2026</span>
+
+            <p>ART ARCHIVE &middot; javascript + supabase 포트폴리오 &middot; 실제 결제/예약 서비스가 아닙니다.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
