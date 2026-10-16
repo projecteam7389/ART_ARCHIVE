@@ -36,7 +36,7 @@ HTML &middot; CSS &middot; JAVASCRIPT(ES Modules)와 **Supabase**(Auth / Databas
 ---
 
 ## 구조설계
-ART ARCHIVE
+ART ARCHIVE/
 ├── index.html        # 메인
 ├── gallery.html      # 작품 갤러리
 ├── detail.html       # 작품 상세
